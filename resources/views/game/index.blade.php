@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div id="mymarker" class="marker absolute w-[55px] h-[55px] block">
-        <img class="border-[#bee1eb] border-2 rounded-full" src="{{ auth()->user()->avatar ?? '' }}" alt="">
+        <img class="border-[#bee1eb] border-2 rounded-full" src="{{ asset('img/avatar/A1578.png') }}" alt="">
     </div>
 
     @php
@@ -23,8 +23,7 @@
     {{-- top-center --}}
     <div class="fixed top-0 left-0 right-0 mx-auto w-max">
         {{-- clicked-land-detail --}}
-        <div
-            class="jsc_land_detail bg-[#001521] gap-4  invisible w-[480px] h-max grid-cols-6 grid  rounded-b-xl text-lg px-6 py-6  text-white ">
+        <div class="jsc_land_detail bg-[#001521] gap-4  invisible w-[480px] h-max grid-cols-6 grid  rounded-b-xl text-lg px-6 py-6  text-white ">
             <div class="col-span-3">
                 <div class=" text-xl text-[#40E9F1] font-bold"><span class="jsc_clicked_land_name">X</span></div>
                 {{-- <a href="#" class="">Owner : <span
@@ -40,10 +39,8 @@
 
 
             <div class="col-span-3">
-                <a class="jsc_clicked_land_picture" href="{{ asset('/img/buildings/winter/classic.png') }}"
-                    data-fancybox>
-                    <img src="{{ asset('/img/buildings/winter/classic.png') }}"
-                        class="object-cover w-full h-full rounded jsc_clicked_land_picture" alt="">
+                <a class="jsc_clicked_land_picture" href="{{ asset('/img/buildings/winter/classic.png') }}" data-fancybox>
+                    <img src="{{ asset('/img/buildings/winter/classic.png') }}" class="object-cover w-full h-full rounded jsc_clicked_land_picture" alt="">
                 </a>
             </div>
         </div>
@@ -59,8 +56,7 @@
                 class="-ml-10 flex  items-center  bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 {{ number_format(auth()->user()->soil) }} SOIL
             </div> --}}
-            <div
-                class="-ml-10 flex  items-center  bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
+            <div class="-ml-10 flex  items-center  bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 1000 SOIL
             </div>
         </div>
@@ -73,20 +69,17 @@
                 class="-ml-10 flex  items-center bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 {{ number_format(auth()->user()->mrg) }} MRG
             </div> --}}
-            <div
-                class="-ml-10 flex  items-center bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
+            <div class="-ml-10 flex  items-center bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 10 MRG
             </div>
         </div>
     </div>
-    <div class="fixed z-30 flex items-center top-10 left-10 w-max h-max">
+    <div class="fixed z-30 flex items-center top-10 left-10 w-max h-max xl:scale-100 ">
         <div class="w-[105px] h-[105px] z-20  left-10 relative   ">
-            <img src="{{ auth()->user()->avatar ?? '' }}"
-                class="w-[74px] bottom-0 top-[16px] left-0 right-0 mx-auto z-20 absolute">
+            <img src="img/avatar/A1578.png" class="w-[74px] bottom-0 top-[16px] left-0 right-0 mx-auto z-20 absolute">
             <img src="{{ asset('img/svg/profile-circle.svg') }}" class="absolute w-full h-full">
         </div>
-        <div
-            class="jsc_profile -ml-10 rounded-full cursor-pointer w-max pl-20 pr-10 h-[75px] flex items-center text-white border-[5px]  border-[#6BB8FF] bg-gradient-to-b from-[#012D40] to-[#026380]">
+        <div class="jsc_profile -ml-10 rounded-full cursor-pointer w-max pl-20 pr-10 h-[75px] flex items-center text-white border-[5px]  border-[#6BB8FF] bg-gradient-to-b from-[#012D40] to-[#026380]">
             <div>
                 <div class="text-2xl font-bold leading-4 pb-0.5  pt-2">{{ auth()->user()->username }}</div>
                 <div class="text-base">Beginner</div>
@@ -95,10 +88,8 @@
     </div>
 
     {{-- profule-menu --}}
-    <div
-        class="jsc_profile_menu w-[250px] invisible text-xl fixed top-40 rounded-xl left-24 clear-both border-[#6BB8FF] border-2 text-white p-4 bg-[#01181f] bg-opacity-90 ">
-        <div
-            class="jsc_profile_menu_close    bg-opacity-25 -mt-1.5 -mr-1 border-white rounded-full bg-white w-6  h-6 flex items-center justify-center pb-0.5 float-right  text-xl cursor-pointer">
+    <div class="jsc_profile_menu w-[250px] invisible text-xl fixed top-40 rounded-xl left-24 clear-both border-[#6BB8FF] border-2 text-white p-4 bg-[#01181f] bg-opacity-90 ">
+        <div class="jsc_profile_menu_close    bg-opacity-25 -mt-1.5 -mr-1 border-white rounded-full bg-white w-6  h-6 flex items-center justify-center pb-0.5 float-right  text-xl cursor-pointer">
             &times
         </div>
         <div class="mt-2 jsc_open_profile_setting_modal border-b border-[#6BB8FF] pb-4 cursor-pointer">
@@ -113,18 +104,15 @@
     <div class="jsc_bottom_modal fixed bottom-0  invisible  right-0 left-0 mx-auto w-[850px] h-[32vh] rounded-t-3xl  ">
 
         <div class="absolute top-0 w-full">
-            <div
-                class="top-10 z-30 jsc_close_land_modals cursor-pointer text-2xl pb-0.5 rounded-full bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center text-white absolute right-4">
+            <div class="top-10 z-30 jsc_close_land_modals cursor-pointer text-2xl pb-0.5 rounded-full bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center text-white absolute right-4">
                 &times
             </div>
-            <div
-                class="text-lg  text-[#40E9F1] text-center z-50 h-[78px]  w-[130px] flex items-center justify-center   absolute mx-auto right-0 left-0">
+            <div class="text-lg  text-[#40E9F1] text-center z-50 h-[78px]  w-[130px] flex items-center justify-center   absolute mx-auto right-0 left-0">
                 <span class="jsc_land_name">LAND</span>
             </div>
             <img src="{{ asset('img/svg/modal-land-click-top.svg') }}" class="absolute block w-full ">
         </div>
-        <div
-            class="flex w-full gap-8 absolute top-20 text-white z-30 bottom-0    bg-[#001521] justify-center items-center">
+        <div class="flex w-full gap-8 absolute top-20 text-white z-30 bottom-0    bg-[#001521] justify-center items-center">
 
             {{-- <div
                 class="jsc_down_button cursor-pointer js_button_offer border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center">
@@ -149,14 +137,7 @@
             </form> --}}
 
 
-            <div
-                class="jsc_down_button cursor-pointer js_button_buy cursor-pointer jsc_pick border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 filter">
-                <div class="object-center w-full h-full ">
-                    <img src="{{ asset('img/icons/mb-shop.svg') }}"
-                        class="-mt-2.5 __theme_hover_shadow_base w-full h-full object-center object-scale-down">
-                    <div class="-mt-10 text-center">Pick Award</div>
-                </div>
-            </div>
+
 
             {{-- 
             <div
@@ -178,20 +159,16 @@
             </div> --}}
 
 
-            <div
-                class="jsc_down_button cursor-pointer js_button_jump border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 filter">
+            <div class="jsc_down_button cursor-pointer js_button_jump border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 filter">
                 <div class="object-center w-full h-full ">
-                    <img src="{{ asset('img/icons/mb-jump.svg') }}"
-                        class="-mt-2.5 __theme_hover_shadow_base w-full h-full object-center object-scale-down">
+                    <img src="{{ asset('img/icons/mb-jump.svg') }}" class="-mt-2.5 __theme_hover_shadow_base w-full h-full object-center object-scale-down">
                     <div class="-mt-10 text-center">JUMP</div>
                 </div>
             </div>
 
-            <div onclick="getReward()"
-                class="jsc_down_button cursor-pointer js_remove_me_after border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 filter">
+            <div onclick="getReward()" class="jsc_down_button cursor-pointer js_remove_me_after border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 filter">
                 <div class="object-center w-full h-full ">
-                    <img src="{{ asset('img/icons/mb-shop.svg') }}"
-                        class="-mt-2.5 __theme_hover_shadow_base w-full h-full object-center object-scale-down">
+                    <img src="{{ asset('img/icons/mb-shop.svg') }}" class="-mt-2.5 __theme_hover_shadow_base w-full h-full object-center object-scale-down">
                     <div class="-mt-10 text-center">Pick Award</div>
                 </div>
             </div>
@@ -211,8 +188,7 @@
         </div>
     </div>
     {{-- modal --}}
-    <div
-        class="jsc_modal jsc_modal_down hidden  fixed  bottom-0 right-0 left-0 mx-auto w-[500px] h-[300px] mb-6  rounded-2xl bg-gray-400 border ">
+    <div class="jsc_modal jsc_modal_down hidden  fixed  bottom-0 right-0 left-0 mx-auto w-[500px] h-[300px] mb-6  rounded-2xl bg-gray-400 border ">
         <div class="flex justify-end">
             <span class="p-4 text-3xl cursor-pointer jsc_modal_close"> &times </span>
         </div>
@@ -647,8 +623,7 @@
 
         })
     </script>
-    <div
-        class="jsc_modal_profile fixed hidden inset-0 m-auto border-[#6BB8FF] rounded-lg w-[400px] z-40 h-max border-2 bg-black bg-opacity-90  text-white">
+    <div class="jsc_modal_profile fixed hidden inset-0 m-auto border-[#6BB8FF] rounded-lg w-[400px] z-40 h-max border-2 bg-black bg-opacity-90  text-white">
         <header>
             <div class="jsc_modal_hide_profile flex items-center justify-end w-full px-4 py-4 ">
                 <ion-icon class="text-2xl filter opacity-80" name="close-circle"></ion-icon>
@@ -661,80 +636,58 @@
                 </div>
                 <div class="col-span-1 flex justify-end pr-[30px] items-center">
                     <div class="jsc_my_avatar border-[#6BB8FF] rounded-full border block w-[100px] h-[100px]">
-                        <div><img class="jsc_my_selected_avatar_img" src="{{ auth()->user()->avatar ?? '' }}"
-                                class="w-full border-2 rounded-full border-[#6BB8FF] cursor-pointer" alt="">
+                        <div><img class="jsc_my_selected_avatar_img" src="{{ auth()->user()->avatar ?? '' }}" class="w-full border-2 rounded-full border-[#6BB8FF] cursor-pointer" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-span-2">
                     <div class="jsc_avatars grid grid-cols-5 px-[30px] gap-2 hidden">
-                        <div
-                            class="jsc_hover_avatar absolute w-[200px] flex items-center hidden p-4 justify-center h-[200px] right-[-220px] border-[#6BB8FF] border-2  bg-black">
+                        <div class="jsc_hover_avatar absolute w-[200px] flex items-center hidden p-4 justify-center h-[200px] right-[-220px] border-[#6BB8FF] border-2  bg-black">
                             <avatar src="{{ auth()->user()->avatar ?? '' }}" class="w-full h-full" alt="">
                         </div>
                         {{--  --}}
-                        <avatar><img src="{{ asset('img/avatar/A1578.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1578.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1579.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1579.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1580.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1580.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1581.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1581.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1582.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1582.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
                         {{--  --}}
-                        <avatar><img src="{{ asset('img/avatar/A1583.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1583.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1584.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1584.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1585.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1585.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1586.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1586.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1587.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1587.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
                         {{--  --}}
-                        <avatar><img src="{{ asset('img/avatar/A1588.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1588.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1589.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1589.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1590.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1590.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1591.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1591.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1592.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1592.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
                         {{--  --}}
-                        <avatar><img src="{{ asset('img/avatar/A1593.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1593.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1594.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1594.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1595.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1595.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1596.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1596.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
-                        <avatar><img src="{{ asset('img/avatar/A1597.png') }}"
-                                class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
+                        <avatar><img src="{{ asset('img/avatar/A1597.png') }}" class="w-14 h-14 ring-2 rounded-full ring-[#6BB8FF] cursor-pointer" alt="">
                         </avatar>
 
                     </div>
@@ -743,8 +696,7 @@
                     Username :
                 </div>
                 <div class="flex items-center col-span-1">
-                    <input value="{{ auth()->user()->username }}" type="text"
-                        class="jsc_new_username rounded w-[170px] bg-black bg-opacity-60 block border py-2 px-4 border-[#6BB8FF] text-[#6BB8FF]">
+                    <input value="{{ auth()->user()->username }}" type="text" class="jsc_new_username rounded w-[170px] bg-black bg-opacity-60 block border py-2 px-4 border-[#6BB8FF] text-[#6BB8FF]">
                 </div>
 
                 <div class="col-span-2 px-[30px]">
@@ -799,5 +751,4 @@
     </script>
 
 
-
-    </x-app-layout>
+</x-guest-layout>
