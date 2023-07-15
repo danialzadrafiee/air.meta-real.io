@@ -21,41 +21,31 @@
         <div id="map" class="w-full h-full"></div>
     </div>
     {{-- top-center --}}
-    <div class="fixed top-0 left-0 right-0 mx-auto w-max">
+    <div class="fixed top-0 left-0 right-0 z-40 mx-auto w-max">
         {{-- clicked-land-detail --}}
-        <div class="jsc_land_detail bg-[#001521] gap-4  invisible w-[480px] h-max grid-cols-6 grid  rounded-b-xl text-lg px-6 py-6  text-white ">
-            <div class="col-span-3">
+        <div class="jsc_land_detail bg-[#001521] gap-4  invisible w-screen md:w-[480px] h-max grid-cols-6 grid rounded-b-xl text-lg px-6 py-6  text-white ">
+            <div class="md:col-span-3 items-center justify-center lg:block flex flex-col col-span-6 ">
                 <div class=" text-xl text-[#40E9F1] font-bold"><span class="jsc_clicked_land_name">X</span></div>
-                {{-- <a href="#" class="">Owner : <span
-                        class="text-blue-400 text-sm block jsc_clicked_land_owner under"> - </span> </a> --}}
                 <div class="">Land Size : <span class="jsc_clicked_land_area">X</span></div>
                 <div class="">Land id : <span class="jsc_clicked_land_id">X</span></div>
                 <div class="">Geo id : <span class="jsc_clicked_land_geo_id">X</span></div>
-                {{-- <div class="">Price : <span class="jsc_clicked_land_price">X</span> <span class="ml-1">Soil <img --}}
-                {{-- src="{{ asset('img/svg/soil.svg') }}" class="inline-block h-6 ml-1 -mt-2" alt=""> --}}
-                {{-- </span> --}}
-                {{-- </div> --}}
             </div>
 
 
-            <div class="col-span-3">
+            <div class="md:col-span-3 col-span-6 items-center justify-center lg:block flex flex-col ">
                 <a class="jsc_clicked_land_picture" href="{{ asset('/img/buildings/winter/classic.png') }}" data-fancybox>
-                    <img src="{{ asset('/img/buildings/winter/classic.png') }}" class="object-cover w-full h-full rounded jsc_clicked_land_picture" alt="">
+                    <img src="{{ asset('/img/buildings/winter/classic.png') }}" class="object-cover w-[200px] md:w-full h-full rounded jsc_clicked_land_picture" alt="">
                 </a>
             </div>
         </div>
     </div>
     {{-- top-right --}}
-    <div class="fixed z-30 top-10 right-10 w-max h-max ">
+    <div class="fixed z-30 right-0 top-0 lg:top-10 lg:right-10 w-max h-max lg:scale-100 scale-75 ">
         <div class="relative flex items-center">
             <div class="flex items-center justify-center">
                 <img src="{{ asset('img/svg/soil.svg') }}" class="absolute z-40 w-[42px] mb-1" alt="">
                 <img src="{{ asset('img/svg/item-box.svg') }}" class="w-[100px] z-30 relative h-[100px]" alt="">
             </div>
-            {{-- <div
-                class="-ml-10 flex  items-center  bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
-                {{ number_format(auth()->user()->soil) }} SOIL
-            </div> --}}
             <div class="-ml-10 flex  items-center  bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 1000 SOIL
             </div>
@@ -65,19 +55,15 @@
                 <img src="{{ asset('img/svg/mrg.svg') }}" class="absolute p-1 mt-1 z-40 w-[42px] mb-1" alt="">
                 <img src="{{ asset('img/svg/item-box.svg') }}" class="w-[100px] z-30 relative h-[100px]" alt="">
             </div>
-            {{-- <div
-                class="-ml-10 flex  items-center bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
-                {{ number_format(auth()->user()->mrg) }} MRG
-            </div> --}}
             <div class="-ml-10 flex  items-center bg-gradient-to-b z-20 pl-10 relative text-white border-4 border-[#6BB8FF] from-[#121213] to-[#263762] text-lg text-center rounded-full w-[200px] h-[50px]">
                 10 MRG
             </div>
         </div>
     </div>
-    <div class="fixed z-30 flex items-center top-10 left-10 w-max h-max xl:scale-100 ">
-        <div class="w-[105px] h-[105px] z-20  left-10 relative   ">
-            <img src="img/avatar/A1578.png" class="w-[74px] bottom-0 top-[16px] left-0 right-0 mx-auto z-20 absolute">
-            <img src="{{ asset('img/svg/profile-circle.svg') }}" class="absolute w-full h-full">
+    <div class="fixed hidden lg:flex z-30  items-center top-10 left-10 ">
+        <div class=" w-[100px] h-[105px] z-20  left-10 relative   ">
+            <img src="img/avatar/A1578.png" class="w-[74px] bottom-0 left-0 right-0 mx-auto top-[16px]  z-20 absolute">
+            <img src="{{ asset('img/svg/profile-circle.svg') }}" class="absolute w-max h-full">
         </div>
         <div class="jsc_profile -ml-10 rounded-full cursor-pointer w-max pl-20 pr-10 h-[75px] flex items-center text-white border-[5px]  border-[#6BB8FF] bg-gradient-to-b from-[#012D40] to-[#026380]">
             <div>
@@ -101,18 +87,18 @@
 
     </div>
     {{-- bottom-center-modal-land-click --}}
-    <div class="jsc_bottom_modal fixed bottom-0  invisible  right-0 left-0 mx-auto w-[850px] h-[32vh] rounded-t-3xl  ">
+    <div class="jsc_bottom_modal  z-30  fixed bottom-0  invisible  right-0 left-0 mx-auto w-screen  lg:w-[850px] h-[32vh] rounded-t-3xl  ">
 
         <div class="absolute top-0 w-full">
-            <div class="top-10 z-30 jsc_close_land_modals cursor-pointer text-2xl pb-0.5 rounded-full bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center text-white absolute right-4">
+            <div class="top-10 md:top-0 z-30 jsc_close_land_modals cursor-pointer text-2xl pb-0.5 rounded-full bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center text-white absolute right-4">
                 &times
             </div>
-            <div class="text-lg  text-[#40E9F1] text-center z-50 h-[78px]  w-[130px] flex items-center justify-center   absolute mx-auto right-0 left-0">
+            <div class="text-lg -bottom-[108px]  md:bottom-[-50px]  text-[#40E9F1] text-center z-50 h-[78px]  w-[130px] flex items-center justify-center   absolute mx-auto right-0 left-0">
                 <span class="jsc_land_name">LAND</span>
             </div>
-            <img src="{{ asset('img/svg/modal-land-click-top.svg') }}" class="absolute block w-full ">
+            <img src="{{ asset('img/svg/modal-land-click-top.svg') }}" class="absolute block w-full -bottom-[82px]">
         </div>
-        <div class="flex w-full gap-8 absolute top-20 text-white z-30 bottom-0    bg-[#001521] justify-center items-center">
+        <div class="flex w-full gap-8 absolute top-20 text-white z-30 bottom-0 bg-[#001521] justify-center items-center">
 
             {{-- <div
                 class="jsc_down_button cursor-pointer js_button_offer border-2 relative aspect-square w-[140px] border-white rounded-xl flex items-center justify-center">
